@@ -3,7 +3,6 @@
 
 from bs4 import BeautifulSoup
 import collections
-import keyring
 import re
 import requests
 import sys
@@ -13,9 +12,9 @@ class Veeam:
     #Initialize variable and get API authorize token
     def __init__(self):
         urllib3.disable_warnings()
-        self.address = 'https://172.22.130.112:9398/api/'
-        self.username = 'backupagent@oncloud.ru'
-        self.password = keyring.get_password('veeam', 'backupagent@oncloud.ru')
+        self.address = 'https://IP:9398/api/'
+        self.username = 'LOGIN'
+        self.password = 'PASSWORD'
         
         self.session_id = self.get_authorize_token()
         self.headers = {'X-RestSvcSessionId': self.session_id['session_id'], 'Content-Type': 'application/xml'}
