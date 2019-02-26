@@ -18,7 +18,8 @@ Compute resources for replica:
 	CPU count: 1
 	Memory usage: 4096 Mb
 	Used space: 12.0 Gb
-----------------------------------------```
+----------------------------------------
+```
 
 As a setting, you must specify variables
 ```
